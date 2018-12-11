@@ -13,22 +13,15 @@ fi = (function() {
    },
 
     map: function map(collection, callback) {
+      let keys = Object.values(collection)
+      let newArr = [];
+      for (let i = 0; i < keys.length; i++) {
+         newArr.push(callback(keys[i]));
+     }
+     return newArr;
+     },
 
- //     
- //     const newArr = [];
- //
- //     for (const element of array) {
- //         newArr.push(callback(element));
- //     }
- //
- //     return newArr;
- // }
-    },
-
-
-
-
-    reduce: function() {
+    reduce: function(collection, callback, acc) {
 
     },
 
